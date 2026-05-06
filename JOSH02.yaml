@@ -24,7 +24,7 @@ proxies:
     server: 202.5.60.225
     port: 21528
 
-  - name: "JOSH-5"
+  - name: "JOSH-BDCOM-5"
     type: http
     server: 103.16.72.174
     port: 21528
@@ -56,7 +56,7 @@ proxy-groups:
       - JOSH-2
       - JOSH-3
       - JOSH-4
-      - JOSH-5
+      - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
       - DIRECT
@@ -72,7 +72,7 @@ proxy-groups:
       - JOSH-2
       - JOSH-3
       - JOSH-4
-      - JOSH-5
+      - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
 
@@ -86,7 +86,7 @@ proxy-groups:
       - JOSH-2
       - JOSH-3
       - JOSH-4
-      - JOSH-5
+      - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
 
@@ -101,7 +101,7 @@ proxy-groups:
       - JOSH-2
       - JOSH-3
       - JOSH-4
-      - JOSH-5
+      - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
 
