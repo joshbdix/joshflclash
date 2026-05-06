@@ -4,26 +4,27 @@ mode: rule
 log-level: info
 
 proxies:
+
   - name: "JOSH INTERNET-Main"
     type: socks5
     server: 103.151.75.196
     port: 10888
     username: ras007
-    password: "121"
+    password: 121
 
   - name: "JOSH INTERNET-KST"
     type: socks5
     server: 103.115.158.1
     port: 10888
     username: ras007
-    password: "121"
+    password: 121
 
   - name: "JOSH INTERNET-RS"
     type: socks5
     server: 103.81.104.149
     port: 10888
     username: ras007
-    password: "121"
+    password: 121
 
   - name: "JOSH-BBTS-1"
     type: http
@@ -57,27 +58,37 @@ proxies:
     username: flcash
     password: flcash
 
+  - name: "JOSH-Orbit"
+    type: socks5
+    server: 182.48.87.29
+    port: 1052
+    username: flcash
+    password: flcash
+
 
 
 proxy-groups:
+
+  # Manual Select
   - name: "SELECT"
     type: select
     proxies:
+      - JOSH INTERNET-Main
+      - JOSH INTERNET-KST
+      - JOSH INTERNET-RS  
       - AUTO
       - FAILOVER
       - LOAD-BALANCE
-      - JOSH INTERNET-Main
-      - JOSH INTERNET-KST
-      - JOSH INTERNET-RS
       - JOSH-BBTS-1
       - JOSH-BBTS-2
       - JOSH-BBTS-3
       - JOSH-BBTS-4
       - JOSH-BDCOM-5
       - JOSH-Nextonline
-      - JOSH-Orbit
+      - JOSH-Orbit  
       - DIRECT
 
+  # Fastest Proxy
   - name: "AUTO"
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -86,7 +97,7 @@ proxy-groups:
     proxies:
       - JOSH INTERNET-Main
       - JOSH INTERNET-KST
-      - JOSH INTERNET-RS
+      - JOSH INTERNET-RS  
       - JOSH-BBTS-1
       - JOSH-BBTS-2
       - JOSH-BBTS-3
@@ -95,6 +106,7 @@ proxy-groups:
       - JOSH-Nextonline
       - JOSH-Orbit
 
+  # Auto Failover
   - name: "FAILOVER"
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -102,7 +114,7 @@ proxy-groups:
     proxies:
       - JOSH INTERNET-Main
       - JOSH INTERNET-KST
-      - JOSH INTERNET-RS
+      - JOSH INTERNET-RS 
       - JOSH-BBTS-1
       - JOSH-BBTS-2
       - JOSH-BBTS-3
@@ -110,7 +122,8 @@ proxy-groups:
       - JOSH-BDCOM-5
       - JOSH-Nextonline
       - JOSH-Orbit
-
+ 
+  # Load Balance
   - name: "LOAD-BALANCE"
     type: load-balance
     strategy: round-robin
@@ -119,7 +132,7 @@ proxy-groups:
     proxies:
       - JOSH INTERNET-Main
       - JOSH INTERNET-KST
-      - JOSH INTERNET-RS
+      - JOSH INTERNET-RS  
       - JOSH-BBTS-1
       - JOSH-BBTS-2
       - JOSH-BBTS-3
