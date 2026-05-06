@@ -60,7 +60,7 @@ proxies:
 
   - name: "JOSH-FTP"
     type: socks5
-    server: 202.40.189.110
+    server: 202.40.190.134
     port: 1088
     username: flcash
     password: flcash
