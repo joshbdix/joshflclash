@@ -1,0 +1,109 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+
+proxies:
+  - name: "JOSH-1"
+    type: http
+    server: 202.5.60.205
+    port: 21528
+
+  - name: "JOSH-2"
+    type: http
+    server: 202.5.60.204
+    port: 21528
+
+  - name: "JOSH-3"
+    type: http
+    server: 202.5.60.211
+    port: 21528
+
+  - name: "JOSH-4"
+    type: http
+    server: 202.5.60.225
+    port: 21528
+
+  - name: "JOSH-5"
+    type: http
+    server: 103.16.72.174
+    port: 21528
+
+  - name: "JOSH-S5-1"
+    type: socks5
+    server: 43.225.148.173
+    port: 6113
+    username: flcash
+    password: flcash
+
+  - name: "JOSH-S5-2"
+    type: socks5
+    server: 182.48.87.29
+    port: 1052
+    username: flcash
+    password: flcash
+
+proxy-groups:
+
+  # Manual Select
+  - name: "SELECT"
+    type: select
+    proxies:
+      - AUTO
+      - FAILOVER
+      - LOAD-BALANCE
+      - JOSH-1
+      - JOSH-2
+      - JOSH-3
+      - JOSH-4
+      - JOSH-5
+      - JOSH-S5-1
+      - JOSH-S5-2
+      - DIRECT
+
+  # Fastest Proxy
+  - name: "AUTO"
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - JOSH-1
+      - JOSH-2
+      - JOSH-3
+      - JOSH-4
+      - JOSH-5
+      - JOSH-S5-1
+      - JOSH-S5-2
+
+  # Auto Failover
+  - name: "FAILOVER"
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - JOSH-1
+      - JOSH-2
+      - JOSH-3
+      - JOSH-4
+      - JOSH-5
+      - JOSH-S5-1
+      - JOSH-S5-2
+
+  # Load Balance
+  - name: "LOAD-BALANCE"
+    type: load-balance
+    strategy: round-robin
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - JOSH-1
+      - JOSH-2
+      - JOSH-3
+      - JOSH-4
+      - JOSH-5
+      - JOSH-S5-1
+      - JOSH-S5-2
+
+rules:
+  - MATCH,SELECT
