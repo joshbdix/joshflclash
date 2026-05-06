@@ -58,10 +58,10 @@ proxies:
     username: flcash
     password: flcash
 
-  - name: "JOSH-Orbit-50M"
+  - name: "JOSH-FTP"
     type: socks5
-    server: 182.48.87.29
-    port: 1052
+    server: 202.40.189.110
+    port: 1088
     username: flcash
     password: flcash
 
@@ -85,7 +85,7 @@ proxy-groups:
       - JOSH-BBTS-120M
       - JOSH-BDCOM-50M
       - JOSH-Nextonline-100M
-      - JOSH-Orbit-50M
+      - JOSH-FTP
       - DIRECT
 
   # Fastest Proxy
@@ -104,7 +104,7 @@ proxy-groups:
       - JOSH-BBTS-120M
       - JOSH-BDCOM-50M
       - JOSH-Nextonline-100M
-      - JOSH-Orbit-50M
+      - JOSH-FTP
 
   # Auto Failover
   - name: "FAILOVER"
@@ -121,7 +121,7 @@ proxy-groups:
       - JOSH-BBTS-120M
       - JOSH-BDCOM-50M
       - JOSH-Nextonline-100M
-      - JOSH-Orbit-50M
+      - JOSH-FTP
  
   # Load Balance
   - name: "LOAD-BALANCE"
@@ -139,7 +139,7 @@ proxy-groups:
       - JOSH-BBTS-120M
       - JOSH-BDCOM-50M
       - JOSH-Nextonline-100M
-      - JOSH-Orbit-50M
+      - JOSH-FTP
 
 rules:
   - MATCH,SELECT
