@@ -57,12 +57,7 @@ proxies:
     username: flcash
     password: flcash
 
-  - name: "JOSH-Orbit"
-    type: socks5
-    server: 182.48.87.29
-    port: 1052
-    username: flcash
-    password: flcash
+
 
 proxy-groups:
   - name: "SELECT"
