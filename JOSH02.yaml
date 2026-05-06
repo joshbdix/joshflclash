@@ -43,6 +43,27 @@ proxies:
     username: flcash
     password: flcash
 
+  - name: "JOSH INTERNET-Main"
+    type: socks5
+    server: 103.151.75.196
+    port: 10888
+    username: ras007
+    password: 121
+
+  - name: "JOSH INTERNET-KST"
+    type: socks5
+    server: 103.115.158.1
+    port: 10888
+    username: ras007
+    password: 121
+
+  - name: "JOSH INTERNET-RS"
+    type: socks5
+    server: 103.81.104.149
+    port: 10888
+    username: ras007
+    password: 121
+
 proxy-groups:
 
   # Manual Select
@@ -59,6 +80,9 @@ proxy-groups:
       - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
+      - JOSH INTERNET-Main
+      - JOSH INTERNET-KST
+      - JOSH INTERNET-RS    
       - DIRECT
 
   # Fastest Proxy
@@ -75,7 +99,9 @@ proxy-groups:
       - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
-
+      - JOSH INTERNET-Main
+      - JOSH INTERNET-KST
+      - JOSH INTERNET-RS  
   # Auto Failover
   - name: "FAILOVER"
     type: fallback
@@ -89,7 +115,9 @@ proxy-groups:
       - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
-
+      - JOSH INTERNET-Main
+      - JOSH INTERNET-KST
+      - JOSH INTERNET-RS  
   # Load Balance
   - name: "LOAD-BALANCE"
     type: load-balance
@@ -104,6 +132,8 @@ proxy-groups:
       - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
-
+      - JOSH INTERNET-Main
+      - JOSH INTERNET-KST
+      - JOSH INTERNET-RS  
 rules:
   - MATCH,SELECT
