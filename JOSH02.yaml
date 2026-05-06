@@ -4,6 +4,28 @@ mode: rule
 log-level: info
 
 proxies:
+
+  - name: "JOSH INTERNET-Main"
+    type: socks5
+    server: 103.151.75.196
+    port: 10888
+    username: ras007
+    password: 121
+
+  - name: "JOSH INTERNET-KST"
+    type: socks5
+    server: 103.115.158.1
+    port: 10888
+    username: ras007
+    password: 121
+
+  - name: "JOSH INTERNET-RS"
+    type: socks5
+    server: 103.81.104.149
+    port: 10888
+    username: ras007
+    password: 121
+
   - name: "JOSH-BBTS-1"
     type: http
     server: 202.5.60.205
@@ -29,40 +51,21 @@ proxies:
     server: 103.16.72.174
     port: 21528
 
-  - name: "JOSH-S5-1"
+  - name: "JOSH-Nextonline"
     type: socks5
     server: 43.225.148.173
     port: 6113
     username: flcash
     password: flcash
 
-  - name: "JOSH-S5-2"
+  - name: "JOSH-Orbit"
     type: socks5
     server: 182.48.87.29
     port: 1052
     username: flcash
     password: flcash
 
-  - name: "JOSH INTERNET-Main"
-    type: socks5
-    server: 103.151.75.196
-    port: 10888
-    username: ras007
-    password: 121
 
-  - name: "JOSH INTERNET-KST"
-    type: socks5
-    server: 103.115.158.1
-    port: 10888
-    username: ras007
-    password: 121
-
-  - name: "JOSH INTERNET-RS"
-    type: socks5
-    server: 103.81.104.149
-    port: 10888
-    username: ras007
-    password: 121
 
 proxy-groups:
 
@@ -70,6 +73,9 @@ proxy-groups:
   - name: "SELECT"
     type: select
     proxies:
+      - JOSH INTERNET-Main
+      - JOSH INTERNET-KST
+      - JOSH INTERNET-RS  
       - AUTO
       - FAILOVER
       - LOAD-BALANCE
@@ -79,10 +85,7 @@ proxy-groups:
       - JOSH-BBTS-4
       - JOSH-BDCOM-5
       - JOSH-S5-1
-      - JOSH-S5-2
-      - JOSH INTERNET-Main
-      - JOSH INTERNET-KST
-      - JOSH INTERNET-RS    
+      - JOSH-S5-2  
       - DIRECT
 
   # Fastest Proxy
@@ -92,6 +95,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - JOSH INTERNET-Main
+      - JOSH INTERNET-KST
+      - JOSH INTERNET-RS  
       - JOSH-BBTS-1
       - JOSH-BBTS-2
       - JOSH-BBTS-3
@@ -99,15 +105,16 @@ proxy-groups:
       - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
-      - JOSH INTERNET-Main
-      - JOSH INTERNET-KST
-      - JOSH INTERNET-RS  
+
   # Auto Failover
   - name: "FAILOVER"
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - JOSH INTERNET-Main
+      - JOSH INTERNET-KST
+      - JOSH INTERNET-RS 
       - JOSH-BBTS-1
       - JOSH-BBTS-2
       - JOSH-BBTS-3
@@ -115,9 +122,7 @@ proxy-groups:
       - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
-      - JOSH INTERNET-Main
-      - JOSH INTERNET-KST
-      - JOSH INTERNET-RS  
+ 
   # Load Balance
   - name: "LOAD-BALANCE"
     type: load-balance
@@ -125,6 +130,9 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - JOSH INTERNET-Main
+      - JOSH INTERNET-KST
+      - JOSH INTERNET-RS  
       - JOSH-BBTS-1
       - JOSH-BBTS-2
       - JOSH-BBTS-3
@@ -132,8 +140,6 @@ proxy-groups:
       - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
-      - JOSH INTERNET-Main
-      - JOSH INTERNET-KST
-      - JOSH INTERNET-RS  
+
 rules:
   - MATCH,SELECT
