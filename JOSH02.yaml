@@ -26,39 +26,39 @@ proxies:
     username: ras007
     password: 121
 
-  - name: "JOSH-BBTS-1"
+  - name: "JOSH-BBTS-20M"
     type: http
     server: 202.5.60.205
     port: 21528
 
-  - name: "JOSH-BBTS-2"
+  - name: "JOSH-BBTS-20M"
     type: http
     server: 202.5.60.204
     port: 21528
 
-  - name: "JOSH-BBTS-3"
+  - name: "JOSH-BBTS-50M"
     type: http
     server: 202.5.60.211
     port: 21528
 
-  - name: "JOSH-BBTS-4"
+  - name: "JOSH-BBTS-120M"
     type: http
     server: 202.5.60.225
     port: 21528
 
-  - name: "JOSH-BDCOM-5"
+  - name: "JOSH-BDCOM-50M"
     type: http
     server: 103.16.72.174
     port: 21528
 
-  - name: "JOSH-Nextonline"
+  - name: "JOSH-Nextonline-100M"
     type: socks5
     server: 43.225.148.173
     port: 6113
     username: flcash
     password: flcash
 
-  - name: "JOSH-Orbit"
+  - name: "JOSH-Orbit-50M"
     type: socks5
     server: 182.48.87.29
     port: 1052
@@ -79,13 +79,13 @@ proxy-groups:
       - AUTO
       - FAILOVER
       - LOAD-BALANCE
-      - JOSH-BBTS-1
-      - JOSH-BBTS-2
-      - JOSH-BBTS-3
-      - JOSH-BBTS-4
-      - JOSH-BDCOM-5
-      - JOSH-Nextonline
-      - JOSH-Orbit  
+      - JOSH-BBTS-20M
+      - JOSH-BBTS-20M
+      - JOSH-BBTS-50M
+      - JOSH-BBTS-120M
+      - JOSH-BDCOM-50M
+      - JOSH-Nextonline-100M
+      - JOSH-Orbit-50M
       - DIRECT
 
   # Fastest Proxy
@@ -98,13 +98,13 @@ proxy-groups:
       - JOSH INTERNET-Main
       - JOSH INTERNET-KST
       - JOSH INTERNET-RS  
-      - JOSH-BBTS-1
-      - JOSH-BBTS-2
-      - JOSH-BBTS-3
-      - JOSH-BBTS-4
-      - JOSH-BDCOM-5
-      - JOSH-Nextonline
-      - JOSH-Orbit
+      - JOSH-BBTS-20M
+      - JOSH-BBTS-20M
+      - JOSH-BBTS-50M
+      - JOSH-BBTS-120M
+      - JOSH-BDCOM-50M
+      - JOSH-Nextonline-100M
+      - JOSH-Orbit-50M
 
   # Auto Failover
   - name: "FAILOVER"
@@ -115,13 +115,13 @@ proxy-groups:
       - JOSH INTERNET-Main
       - JOSH INTERNET-KST
       - JOSH INTERNET-RS 
-      - JOSH-BBTS-1
-      - JOSH-BBTS-2
-      - JOSH-BBTS-3
-      - JOSH-BBTS-4
-      - JOSH-BDCOM-5
-      - JOSH-Nextonline
-      - JOSH-Orbit
+      - JOSH-BBTS-20M
+      - JOSH-BBTS-20M
+      - JOSH-BBTS-50M
+      - JOSH-BBTS-120M
+      - JOSH-BDCOM-50M
+      - JOSH-Nextonline-100M
+      - JOSH-Orbit-50M
  
   # Load Balance
   - name: "LOAD-BALANCE"
@@ -133,13 +133,13 @@ proxy-groups:
       - JOSH INTERNET-Main
       - JOSH INTERNET-KST
       - JOSH INTERNET-RS  
-      - JOSH-BBTS-1
-      - JOSH-BBTS-2
-      - JOSH-BBTS-3
-      - JOSH-BBTS-4
-      - JOSH-BDCOM-5
-      - JOSH-Nextonline
-      - JOSH-Orbit
+      - JOSH-BBTS-20M
+      - JOSH-BBTS-20M
+      - JOSH-BBTS-50M
+      - JOSH-BBTS-120M
+      - JOSH-BDCOM-50M
+      - JOSH-Nextonline-100M
+      - JOSH-Orbit-50M
 
 rules:
   - MATCH,SELECT
