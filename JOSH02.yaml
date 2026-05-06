@@ -31,7 +31,7 @@ proxies:
     server: 202.5.60.205
     port: 21528
 
-  - name: "JOSH-BBTS-20M"
+  - name: "JOSH-BBTS-20M-2"
     type: http
     server: 202.5.60.204
     port: 21528
@@ -80,7 +80,7 @@ proxy-groups:
       - FAILOVER
       - LOAD-BALANCE
       - JOSH-BBTS-20M
-      - JOSH-BBTS-20M
+      - JOSH-BBTS-20M-2
       - JOSH-BBTS-50M
       - JOSH-BBTS-120M
       - JOSH-BDCOM-50M
@@ -99,7 +99,7 @@ proxy-groups:
       - JOSH INTERNET-KST
       - JOSH INTERNET-RS  
       - JOSH-BBTS-20M
-      - JOSH-BBTS-20M
+      - JOSH-BBTS-20M-2
       - JOSH-BBTS-50M
       - JOSH-BBTS-120M
       - JOSH-BDCOM-50M
@@ -116,7 +116,7 @@ proxy-groups:
       - JOSH INTERNET-KST
       - JOSH INTERNET-RS 
       - JOSH-BBTS-20M
-      - JOSH-BBTS-20M
+      - JOSH-BBTS-20M-2
       - JOSH-BBTS-50M
       - JOSH-BBTS-120M
       - JOSH-BDCOM-50M
@@ -134,7 +134,7 @@ proxy-groups:
       - JOSH INTERNET-KST
       - JOSH INTERNET-RS  
       - JOSH-BBTS-20M
-      - JOSH-BBTS-20M
+      - JOSH-BBTS-20M-2
       - JOSH-BBTS-50M
       - JOSH-BBTS-120M
       - JOSH-BDCOM-50M
