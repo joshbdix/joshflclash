@@ -4,22 +4,22 @@ mode: rule
 log-level: info
 
 proxies:
-  - name: "JOSH-1"
+  - name: "JOSH-BBTS-1"
     type: http
     server: 202.5.60.205
     port: 21528
 
-  - name: "JOSH-2"
+  - name: "JOSH-BBTS-2"
     type: http
     server: 202.5.60.204
     port: 21528
 
-  - name: "JOSH-3"
+  - name: "JOSH-BBTS-3"
     type: http
     server: 202.5.60.211
     port: 21528
 
-  - name: "JOSH-4"
+  - name: "JOSH-BBTS-4"
     type: http
     server: 202.5.60.225
     port: 21528
@@ -52,10 +52,10 @@ proxy-groups:
       - AUTO
       - FAILOVER
       - LOAD-BALANCE
-      - JOSH-1
-      - JOSH-2
-      - JOSH-3
-      - JOSH-4
+      - JOSH-BBTS-1
+      - JOSH-BBTS-2
+      - JOSH-BBTS-3
+      - JOSH-BBTS-4
       - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
@@ -68,10 +68,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - JOSH-1
-      - JOSH-2
-      - JOSH-3
-      - JOSH-4
+      - JOSH-BBTS-1
+      - JOSH-BBTS-2
+      - JOSH-BBTS-3
+      - JOSH-BBTS-4
       - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
@@ -82,10 +82,10 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - JOSH-1
-      - JOSH-2
-      - JOSH-3
-      - JOSH-4
+      - JOSH-BBTS-1
+      - JOSH-BBTS-2
+      - JOSH-BBTS-3
+      - JOSH-BBTS-4
       - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
@@ -97,10 +97,10 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - JOSH-1
-      - JOSH-2
-      - JOSH-3
-      - JOSH-4
+      - JOSH-BBTS-1
+      - JOSH-BBTS-2
+      - JOSH-BBTS-3
+      - JOSH-BBTS-4
       - JOSH-BDCOM-5
       - JOSH-S5-1
       - JOSH-S5-2
