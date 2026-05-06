@@ -84,8 +84,8 @@ proxy-groups:
       - JOSH-BBTS-3
       - JOSH-BBTS-4
       - JOSH-BDCOM-5
-      - JOSH-S5-1
-      - JOSH-S5-2  
+      - JOSH-Nextonline
+      - JOSH-Orbit  
       - DIRECT
 
   # Fastest Proxy
@@ -103,8 +103,8 @@ proxy-groups:
       - JOSH-BBTS-3
       - JOSH-BBTS-4
       - JOSH-BDCOM-5
-      - JOSH-S5-1
-      - JOSH-S5-2
+      - JOSH-Nextonline
+      - JOSH-Orbit
 
   # Auto Failover
   - name: "FAILOVER"
@@ -120,8 +120,8 @@ proxy-groups:
       - JOSH-BBTS-3
       - JOSH-BBTS-4
       - JOSH-BDCOM-5
-      - JOSH-S5-1
-      - JOSH-S5-2
+      - JOSH-Nextonline
+      - JOSH-Orbit
  
   # Load Balance
   - name: "LOAD-BALANCE"
@@ -138,8 +138,8 @@ proxy-groups:
       - JOSH-BBTS-3
       - JOSH-BBTS-4
       - JOSH-BDCOM-5
-      - JOSH-S5-1
-      - JOSH-S5-2
+      - JOSH-Nextonline
+      - JOSH-Orbit
 
 rules:
   - MATCH,SELECT
