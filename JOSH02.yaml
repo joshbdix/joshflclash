@@ -91,6 +91,7 @@ proxy-groups:
       - JOSH-BDCOM-50M
       - JOSH-Nextonline-100M
       - JOSH-FTP
+      - JOSH-EURO-200M
       - DIRECT
 
   # Fastest Proxy
