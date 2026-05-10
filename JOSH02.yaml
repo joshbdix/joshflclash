@@ -65,6 +65,11 @@ proxies:
     username: flcash
     password: flcash
 
+  - name: "JOSH-EURO-200M"
+    type: http
+    server: 59.153.18.142
+    port: 21528
+
 
 
 proxy-groups:
