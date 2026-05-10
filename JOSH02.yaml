@@ -67,7 +67,7 @@ proxies:
 
   - name: "JOSH-EURO-200M"
     type: http
-    server: 59.153.18.142
+    server: 59.153.19.34
     port: 21528
 
 
