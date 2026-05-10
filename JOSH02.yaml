@@ -111,6 +111,7 @@ proxy-groups:
       - JOSH-BDCOM-50M
       - JOSH-Nextonline-100M
       - JOSH-FTP
+      - JOSH-EURO-200M
 
   # Auto Failover
   - name: "FAILOVER"
@@ -128,6 +129,7 @@ proxy-groups:
       - JOSH-BDCOM-50M
       - JOSH-Nextonline-100M
       - JOSH-FTP
+      - JOSH-EURO-200M
  
   # Load Balance
   - name: "LOAD-BALANCE"
@@ -146,6 +148,7 @@ proxy-groups:
       - JOSH-BDCOM-50M
       - JOSH-Nextonline-100M
       - JOSH-FTP
+      - JOSH-EURO-200M
 
 rules:
   - MATCH,SELECT
