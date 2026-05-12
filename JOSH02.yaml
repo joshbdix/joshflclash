@@ -70,11 +70,6 @@ proxies:
     server: 59.153.19.34
     port: 21528
     
-  - name: "JOSH-Circle-LiVETV"
-    type: http
-    server: 202.136.88.210
-    port: 21528
-
 
 
 proxy-groups:
@@ -97,7 +92,7 @@ proxy-groups:
       - JOSH-Nextonline-100M
       - JOSH-FTP
       - JOSH-EURO-200M
-      - JOSH-Circle-LiVETV      
+  
       - DIRECT
 
   # Fastest Proxy
@@ -137,7 +132,7 @@ proxy-groups:
       - JOSH-Nextonline-100M
       - JOSH-FTP
       - JOSH-EURO-200M
-      - JOSH-Circle-LiVETV 
+
       
   # Load Balance
   - name: "LOAD-BALANCE"
@@ -157,7 +152,7 @@ proxy-groups:
       - JOSH-Nextonline-100M
       - JOSH-FTP
       - JOSH-EURO-200M
-      - JOSH-Circle-LiVETV
+
       
 rules:
   - MATCH,SELECT
