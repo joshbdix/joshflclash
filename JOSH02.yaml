@@ -7,7 +7,7 @@ proxies:
 
   - name: "JOSH INTERNET-Main"
     type: socks5
-    server: 103.151.75.196
+    server: 103.115.158.32
     port: 10888
     username: ras007
     password: 121
@@ -23,8 +23,8 @@ proxies:
     type: socks5
     server: 103.81.104.149
     port: 10888
-    username: ras007
-    password: 121
+    username: test
+    password: test123
 
   - name: "JOSH-BBTS-20M"
     type: http
